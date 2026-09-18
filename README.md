@@ -1,6 +1,7 @@
 # Send FCM Notifications
 
 A NestJS API for sending Firebase Cloud Messaging notifications to a device based on topic.
+Related project that accept the API: [receive-fcm-kotlin](https://github.com/insanansharyrasul/receive-fcm-kotlin)
 
 ## Project setup
 
