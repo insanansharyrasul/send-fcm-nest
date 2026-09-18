@@ -40,7 +40,7 @@ describe('NotificationsService', () => {
     mockSend.mockResolvedValue('firebase-message-id');
 
     const notification = {
-      token: 'device-token',
+      topic: 'topic',
       title: 'Hello',
       description: 'Test notification',
     };
@@ -49,7 +49,7 @@ describe('NotificationsService', () => {
 
     expect(result).toBe('firebase-message-id');
     expect(mockSend).toHaveBeenCalledWith({
-      token: 'device-token',
+      topic: 'topic',
       notification: {
         title: 'Hello',
         body: 'Test notification',
@@ -62,7 +62,7 @@ describe('NotificationsService', () => {
 
     await expect(
       service.sendNotification({
-        token: 'device-token',
+        topic: 'topic',
         title: 'Hello',
         description: 'Test notification',
       }),

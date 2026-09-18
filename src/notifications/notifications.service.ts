@@ -62,7 +62,7 @@ export class NotificationsService {
 
   sendNotification(notification: NotificationDto): Promise<string> {
     return getMessaging().send({
-      token: notification.token,
+      topic: notification.topic,
       notification: {
         title: notification.title,
         body: notification.description,

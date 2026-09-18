@@ -29,7 +29,7 @@ describe('NotificationsController', () => {
 
   it('sends a notification through the service', async () => {
     const notification: NotificationDto = {
-      token: 'device-token',
+      topic: 'topic',
       title: 'Hello',
       description: 'Test notification',
     };

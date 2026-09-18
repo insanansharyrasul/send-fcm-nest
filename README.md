@@ -1,6 +1,6 @@
 # Send FCM Notifications
 
-A NestJS API for sending Firebase Cloud Messaging notifications to a device token.
+A NestJS API for sending Firebase Cloud Messaging notifications to a device based on topic.
 
 ## Project setup
 
@@ -29,7 +29,7 @@ The API listens on `http://localhost:3000` by default.
 
 ## Send a notification
 
-Replace `YOUR_FCM_DEVICE_TOKEN` with a valid FCM registration token:
+Replace `YOUR_FCM_TOPIC` with a valid FCM topic:
 
 ```bash
 curl -X POST http://localhost:3000/notifications/send \
@@ -37,11 +37,11 @@ curl -X POST http://localhost:3000/notifications/send \
   -d '{
     "title": "Hello from FCM",
     "description": "This is a test notification.",
-    "token": "YOUR_FCM_DEVICE_TOKEN"
+    "topic": "YOUR_FCM_TOPIC"
   }'
 ```
 
-On success, Firebase returns a message ID. An invalid or expired device token
+On success, Firebase returns a message ID. An invalid or expired topic
 returns a Firebase error.
 
 ## Run tests
