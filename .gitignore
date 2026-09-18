@@ -42,6 +42,9 @@ lerna-debug.log*
 .env.production.local
 .env.local
 
+# Firebase Admin SDK credentials
+/learn-fcm-5935e-firebase-adminsdk-fbsvc-f0570c01b4.json
+
 # temp directory
 .temp
 .tmp
